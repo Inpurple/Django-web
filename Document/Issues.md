@@ -44,3 +44,9 @@ urlpatterns = [
 #coding:gbk　或
 #coding:utf-8　或
 ##-*- coding : gbk -*-
+
+### 7.报错No module named 'django.core.urlresolvers'
+django2.0 把原来的 django.core.urlresolvers 包 更改为了 django.urls包，所以我们需要把导入的包都修改一下就可以了
+
+### 8.在浏览器中输入正确的URL地址之后，页面显示为空白
+检查html文件编辑后是否保存
