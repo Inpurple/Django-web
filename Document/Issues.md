@@ -34,7 +34,7 @@ urlpatterns = [
 ```
 ### 6.当加入中文注释时，eclipse不支持，并且运行程序报错： 
 #### 6.1设置工作空间编码。
-![image]Document/Pictures/editor.png
+![image](Document/Pictures/editor.png)
 在Python脚本文件的第一行或第二行添加一句：
 #coding:gbk　或
 #coding:utf-8　或
