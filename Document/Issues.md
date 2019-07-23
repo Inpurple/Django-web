@@ -33,8 +33,13 @@ urlpatterns = [
 ]
 ```
 ### 6.当加入中文注释时，eclipse不支持，并且运行程序报错： 
-#### 6.1设置工作空间编码。
+#### 6.1设置编辑器编码。
 ![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/editor.png)
+#### 6.2设置工作空间编码。
+![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/workspaceencode.png)
+#### 6.3设置配置编码。
+打开eclipse安装目录->eclipse.ini，末行加上-Dfile.encoding=UTF-8
+#### 6.4修改python文件编码编码。
 在Python脚本文件的第一行或第二行添加一句：
 #coding:gbk　或
 #coding:utf-8　或
