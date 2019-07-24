@@ -9,8 +9,8 @@ A：Eclipse未配置好Django<br>
 S：报错无模块Django，重新pip install 安装即可，再在Eclipse→Window→Preference→PyDev→PythonIntepreter→library，检查是否已成功安装
 
 ### 3.常见debug工具
-#### 3.1Django shell测试项目和排除故障的交互式终端会话。但是如果要用到每次修改模型需要重启Shell，操作方式为Ctrl+Z 加回车。
-#### 3.2Django启动服务器，查看系统中的项目 python manage.py runserver
+3.1Django shell测试项目和排除故障的交互式终端会话。但是如果要用到每次修改模型需要重启Shell，操作方式为Ctrl+Z 加回车。<br>  
+3.2Django启动服务器，查看系统中的项目 python manage.py runserver
 
 ### 4.生成的模型网页显示有误 object(1)和object(2)
 P:向网站注册两个Topic： Chess和Rock Climbing 点击save完成后，生成的不是Chess 和 Rock Climbing而是object(1)和object(2)<br>  
@@ -71,17 +71,8 @@ django2.0 把原来的 django.core.urlresolvers 包 更改为了 django.urls包�
 |Request Method|GET|
 |Request URL|http://localhost:8000/new_entry/(%3FP3%5Cd+)/ |
 |Django Version:|2.2.3|
-|Exception Type:|	NoReverseMatch|
-|Exception Value:	|
-Reverse for 'new_entry' with no arguments not found. 1 pattern(s) tried: ['new_entry\\/\\(\\?P(?P<topic_id>[^/]+)\\\\d\\+\\)\\/$']
-Exception Location:	F:\Django\Virutal Environment\learning_log\ll_env\lib\site-packages\django\urls\resolvers.py in _reverse_with_prefix, line 668|
-|Python Executable:|	F:\Django\Virutal Environment\learning_log\ll_env\Scripts\python.exe|
-|Python Version:|	3.6.6|
-|Python Path:	|
-['F:\\Django\\Virutal Environment\\learning_log',
- 'F:\\Django\\Virutal Environment\\learning_log\\ll_env\\Scripts\\python36.zip',
- 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36-32\\DLLs',
- 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36-32\\lib',
- 'C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36-32',
- 'F:\\Django\\Virutal Environment\\learning_log\\ll_env',
- 'F:\\Django\\Virutal Environment\\learning_log\\ll_env\\lib\\site-packages']|
+|Exception Type:|NoReverseMatch|
+|Exception Value:|Reverse for 'new_entry' with no arguments not found. 1 pattern(s) tried: ['new_entry\\/\\(\\?P(?P<topic_id>[^/]+)\\\\d\\+\\)\\/$']Exception Location:	F:\Django\Virutal Environment\learning_log\ll_env\lib\site-packages\django\urls\resolvers.py in _reverse_with_prefix, line 668|
+|Python Executable:|F:\Django\Virutal Environment\learning_log\ll_env\Scripts\python.exe|
+|Python Version:|3.6.6|
+
