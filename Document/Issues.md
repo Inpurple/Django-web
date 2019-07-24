@@ -4,7 +4,7 @@ Django开发常见问题总结
 ### 1.在Eclipse+Django一系列的编码之后，编译器会报错，可忽略。
 
 ### 2.Eclipse未配置好Django
-P:在虚拟环境下的命令窗口输入代码“from django.db import models”，无报错信息。在models.py文件中运行该代码是出现报错。
+P:在虚拟环境下的命令窗口输入代码“from django.db import models”，无报错信息。在models.py文件中运行该代码是出现报错。<br>  
 A：Eclipse未配置好Django<br>  
 S：报错无模块Django，重新pip install 安装即可，再在Eclipse→Window→Preference→PyDev→PythonIntepreter→library，检查是否已成功安装
 
@@ -13,13 +13,15 @@ S：报错无模块Django，重新pip install 安装即可，再在Eclipse→Win
 #### 3.2Django启动服务器，查看系统中的项目 python manage.py runserver
 
 ### 4.生成的模型网页显示有误 object(1)和object(2)
-P:向网站注册两个Topic： Chess和Rock Climbing 点击save完成后，生成的不是Chess 和 Rock Climbing而是object(1)和object(2)
+P:向网站注册两个Topic： Chess和Rock Climbing 点击save完成后，生成的不是Chess 和 Rock Climbing而是object(1)和object(2)<br>  
 S:检查class Entry(models.Model):的str文件:是否拼写错误
 
 ### 5.Django 1.8 和2.0之后的url变成了path，改写方法
 S:
 5.1 learning_log/urls.py
+
 ![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/Django1.8_learning_log_urls.png)
+
 ```python
 from django.contrib import admin
 from django.urls import path,include
@@ -31,7 +33,10 @@ urlpatterns = [
 ```
 
 5.2 learning_logs/urls.py
+
+
 ![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/Django1.8_learning_logs_urls.png)
+
 ```python
 from django.urls import path
 from . import views
@@ -61,6 +66,7 @@ django2.0 把原来的 django.core.urlresolvers 包 更改为了 django.urls包�
 检查html文件编辑后是否保存
 
 ### 9.NoReverseMatch
+|信息|描述|
 |:---|:---|
 |Request Method|GET|
 |Request URL|http://localhost:8000/new_entry/(%3FP3%5Cd+)/ |
