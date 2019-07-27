@@ -112,5 +112,14 @@ app_name = 'users'
 
 ```
 
+### 11. The current path, users/login/, didn't match any of these.：
+在topics函数前加入装饰器，login_required()之后，修改settings.py实现重新定向，但是打开相应网页出现报错。
+
+![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/pagenotfound.png)
+
+bug：我的设置与实际的URL不匹配。
+![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/settings.png)
+
+![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/url_py.png)
 
 
