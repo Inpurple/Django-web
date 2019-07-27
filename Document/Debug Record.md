@@ -117,9 +117,11 @@ app_name = 'users'
 
 ![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/pagenotfound.png)
 
-bug：我的设置与实际的URL不匹配。
+bug：我的设置与实际的URL不匹配，将url前加入“/”即可。
 ![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/settings.png)
 
 ![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/url_py.png)
+
+![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/website.png)
 
 
