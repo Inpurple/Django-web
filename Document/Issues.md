@@ -77,3 +77,40 @@ django2.0 把原来的 django.core.urlresolvers 包 更改为了 django.urls包�
 |Python Version:|3.6.6|
 
 ![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/NoReverseMatch.png)
+
+### 10. 无编写的视图函数，使用默认视图login的改写方法：
+
+Django 1.11
+```python
+from django.conf.urls import url
+from django.contrib.auth.views import login
+ 
+from . import views
+ 
+urlpatterns = [
+    url(r'^login/$', login, {'template_name': 'users/login.html'},name='login'),
+]
+```
+
+Django 2.2.3
+```python
+
+"""为应用程序users定义URL模式"""
+ 
+from django.urls import path, include
+from django.contrib.auth.views import LoginView
+from . import views
+# 修改模板路径
+ 
+LoginView.template_name = 'users/login.html'
+urlpatterns = [
+    # 登录界面
+    path('login/', LoginView.as_view(),
+         name='login'),
+]
+app_name = 'users'
+
+```
+
+
+
