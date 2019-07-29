@@ -128,3 +128,10 @@ bug：我的设置与实际的URL不匹配，将url前加入“/”即可。
 ### 12.虚拟环境处于活动状态时，才能正常打开项目的URL。
 项目目录+python manage.py runserver 查看项目，其中有项目的URL
 
+### 13.HTML 界面显示导航栏无topics。
+![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/ISSUE.png)
+打开网页，点击F12定位。
+![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/F12.png)
+
+修改HTML文件是否有拼写错误。
+
