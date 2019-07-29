@@ -19,8 +19,15 @@ S:检查class Entry(models.Model):的str文件:是否拼写错误
 ### 5.Django 1.8 和2.0之后的url变成了path，改写方法
 S:
 5.1 learning_log/urls.py
+```python
+from django.conf.urls import url
+from django.contrib import admin
 
-![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/Django1.8_learning_log_urls.png)
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+]
+```
+
 
 ```python
 from django.contrib import admin
@@ -130,8 +137,11 @@ bug：我的设置与实际的URL不匹配，将url前加入“/”即可。
 
 ### 13.HTML 界面显示导航栏无topics。
 ![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/ISSUE.png)
+
+
 打开网页，点击F12定位。
 ![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/F12.png)
+
 
 修改HTML文件是否有拼写错误。
 
