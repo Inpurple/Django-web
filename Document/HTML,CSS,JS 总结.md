@@ -9,21 +9,21 @@
   
 ### 4.\<li> 标签定义列表项目。
 
-<li> 标签可用在有序列表（<ol>）、无序列表（<ul>）和菜单列表（<menu>）中。
+\<li> 标签可用在有序列表（\<ol>）、无序列表（\<ul>）和菜单列表（\<menu>）中。
 
 ### 5.<title>标签
-<title>Learning Log</title> 包含了一个<title>元素，在浏览器中打开学习笔记的页面时，浏览器的标题栏将显示该元素的内容。
+\<title>Learning Log</title> 包含了一个\<title>元素，在浏览器中打开学习笔记的页面时，浏览器的标题栏将显示该元素的内容。
   
-### 6.<form action="{% url 'learning_logs:new_topic' %}" method='POST'>
+### 6.\<form action="{% url 'learning_logs:new_topic' %}" method='POST'>
   定义 HTML表单。
   实参action告诉服务器将提交的表单数据发送到哪里，这里我们将它发送给视图函数new_topic()
   实参method让浏览器以POST请求方式提交数据。
 
-### 7.\<h2>:Add a new topic:</h2>
+### 7.\<h2>:Add a new topic:\</h2>
 \<h2>\</h2>是标题2标签
 
-### 8.模板标签{% csrf_token %}
+### 8.模板标签\{% csrf_token %}
 防止攻击者利用表单来获得对服务器未经授权的访问（这种攻击称为跨站请求伪造）。
 
-### 9.{{ form.as_p }}
+### 9.\{{ form.as_p }}
 只需包含模板变量form.as_p 让Django 自动创建表单所需的全部字段。修饰符as_p 让Django以段落形式渲染所有的表单元素，这是一种显示表单的简单方式。
