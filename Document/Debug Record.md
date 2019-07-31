@@ -27,7 +27,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 ]
 ```
-
+应改为
 
 ```python
 from django.contrib import admin
@@ -41,9 +41,16 @@ urlpatterns = [
 
 5.2 learning_logs/urls.py
 
+```python
+from django.urls import path
+from . import views
+urlpatterns = [
+    # Home page.
+    url(r'^$', views.index, name='index'),
+]
+```
 
-![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/Django1.8_learning_logs_urls.png)
-
+应改为
 ```python
 from django.urls import path
 from . import views
