@@ -6,5 +6,5 @@ gunicorn==19.9.0
 pytz==2019.1
 sqlparse==0.3.0
 static3==0.7.0
-Psycopg==2.8.3
+Psycopg2>=2.6.1
 Python==3.6.6
