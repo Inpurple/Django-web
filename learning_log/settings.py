@@ -153,7 +153,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     ALLOWED_HOSTS=['*']
     
 #静态资产配置
-    BASE_DIR=os.pathdirname(os.path.abspath(_file_))
+    BASE_DIR=os.path.dirname(os.path.abspath(_file_))
     STATTIC_ROOT='staticfies'
 STATICFILES_DIRS=(
 os.path.join(BASE_DIR,'static'),
