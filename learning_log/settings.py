@@ -139,7 +139,8 @@ BOOTSTRAP3={
 
 
 #Heroku 设置
-if os.getcwd()=='/app':
+cwd = os.getcwd()
+if cwd == '/app' or cwd[:4] == '/tmp':
     import dj_database_url
     DATABASES={
         'default':dj_database_url.config(default='postgres://localhost')
@@ -151,12 +152,12 @@ if os.getcwd()=='/app':
     # 支持所有的主机头
     ALLOWED_HOSTS=['*']
     
-    #静态资产配置
+#静态资产配置
     BASE_DIR=os.pathdirname(os.path.abspath(_file_))
     STATTIC_ROOT='staticfies'
-    STATICFILES_DIRS=(
-            os.path.join(BASE_DIR,'static')
-        )
-    
+STATICFILES_DIRS=(
+os.path.join(BASE_DIR,'static')
+    )
+
     
     
