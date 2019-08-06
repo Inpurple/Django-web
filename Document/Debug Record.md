@@ -152,9 +152,12 @@ bug：我的设置与实际的URL不匹配，将url前加入“/”即可。
 
 修改HTML文件是否有拼写错误。
 
-###14.什么情况下在html文件前要写{% load bootstrap3 %}
+### 14.什么情况下在html文件前要写{% load bootstrap3 %}
 
-###15.Windows 创建 .gitignore 提示必须键入文件名
+### 15.Windows 创建 .gitignore 提示必须键入文件名
 当我们需要将一个项目提交到Git时，并不是所有的文件都需要提交，比如一些自动生成的文件，这时候就可以使用.gitignore来忽略一些不需要提交的文件， 
 在Windows中不能创建以”.”开头文件,直接创建 .gitignore 提示必须键入文件名。
+
+### 16.项目部署后，使用浏览器打开部署后的URL，报错 app crash
+
 
