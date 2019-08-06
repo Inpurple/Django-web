@@ -156,7 +156,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     BASE_DIR=os.pathdirname(os.path.abspath(_file_))
     STATTIC_ROOT='staticfies'
 STATICFILES_DIRS=(
-os.path.join(BASE_DIR,'static')
+os.path.join(BASE_DIR,'static'),
     )
 
     
