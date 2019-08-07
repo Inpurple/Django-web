@@ -159,5 +159,8 @@ bug：我的设置与实际的URL不匹配，将url前加入“/”即可。
 在Windows中不能创建以”.”开头文件,直接创建 .gitignore 提示必须键入文件名。
 
 ### 16.项目部署后，使用浏览器打开部署后的URL，报错 app crash
+使用命令heroku logs --tail
 
+![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190806171651.png)
 
+解决方法：在Heroku上建立数据库
