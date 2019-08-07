@@ -150,8 +150,9 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     SECURE_PROXY_SSL_HEADER=('HTTP_X_FORWARDED_PROTO','https')
     
     # 支持所有的主机头
-    ALLOWED_HOSTS=['*']
+    ALLOWED_HOSTS=['chuanlegequan-learning-log.herokuapp.com']
     
+    DEBUG=False
 #静态资产配置
     BASE_DIR=os.path.dirname(os.path.abspath(__file__))
     STATTIC_ROOT='staticfies'
