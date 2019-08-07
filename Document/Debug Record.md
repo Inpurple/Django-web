@@ -177,3 +177,31 @@ bug：我的设置与实际的URL不匹配，将url前加入“/”即可。
 在setting.py中开启 debug开关 报错为如图所示
 ![image](https://github.com/Inpurple/Django-web/blob/master/Document/Pictures/%E6%97%A0%E6%95%88%E4%B8%BB%E6%9C%BA.png)
 
+解决方法，将本地环境的setting部分 Allow_hosts 加入主机的地址
+
+```python
+DEBUG = False
+ALLOWED_HOSTS = ['localhost']
+```
+改为 
+
+```python
+DEBUG = False
+ALLOWED_HOSTS = ['127.0.0.1','localhost']
+```
+
+### 19.git push heroku master 报错 Could not resolve host: git.heroku.com
+fatal: unable to access 'https://git.heroku.com/chuanlegequan-learning-log.git/
+: Could not resolve host: git.heroku.com
+
+解决方法：
+检查自己的状态 Git remote -v
+
+(mm_env) F:\Django\Virutal Environment\learning_log>Git remote -v <br>  
+heroku  https://git.heroku.com/chuanlegequan-learning-log.git (fetch)<br>  
+heroku  https://git.heroku.com/chuanlegequan-learning-log.git (push)<br>  
+
+输入命令 git remote set-url --add heroku  https://git.heroku.com/chuanlegequan-learning-log.git 
+
+后面是提交目标地址。就OK了
+
