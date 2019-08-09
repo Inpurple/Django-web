@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from .models import Topic,Entry
 from .forms import TopicForm,EntryForm
+from django.shortcuts import render,get_object_or_404
 from django.http.response import Http404
 
 #from pip._vendor.requests.api import post
@@ -20,10 +21,11 @@ def topics(request):
     topics = Topic.objects.filter(owner=request.user).order_by('date_added')
     context = {'topics':topics}
     return render(request,'learning_logs/topics.html',context)
+
 @login_required
 def topic(request,topic_id):
     """显示单个主题及所有的条目"""
-    topic=Topic.objects.get(id=topic_id)
+    topic=get_object_or_404(Topic,id=topic_id)
     #确认请求的主题属于当前用户
     if topic.owner!=request.user:
         raise Http404
@@ -91,10 +93,8 @@ def edit_entry(request,entry_id):
             form.save()
             return HttpResponseRedirect(reverse('learning_logs:topic',args=[topic.id]))
     context={'form':form,'topic':topic,'entry':entry,}
-    return render(request,'learning_logs/_entry.html',context)
+    return render(request,'learning_logs/edit_entry.html',context)
             
-            
-
 
     
         
