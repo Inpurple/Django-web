@@ -194,7 +194,7 @@ ALLOWED_HOSTS = ['127.0.0.1','localhost']
 fatal: unable to access 'https://git.heroku.com/chuanlegequan-learning-log.git/
 : Could not resolve host: git.heroku.com
 
-解决方法：
+解决方法1：
 检查自己的状态 Git remote -v
 
 (mm_env) F:\Django\Virutal Environment\learning_log>Git remote -v <br>  
@@ -204,4 +204,39 @@ heroku  https://git.heroku.com/chuanlegequan-learning-log.git (push)<br>
 输入命令 git remote set-url --add heroku  https://git.heroku.com/chuanlegequan-learning-log.git 
 
 后面是提交目标地址。就OK了
+
+解决方法2：再试一遍
+
+### 20.Git: bash: cd: too many arguments 
+打开git-bash想新建一个仓库的时候，出现too many arguments 
+这个原因是因为路径名或者变量中间有空格，这个时候需要用双引号括起来 
+
+### 21.git push 到 github            $  git push -u origin master 报错
+
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+提示:更新被拒绝，因为当前分支的提示位于远程分支的后面。在再次推送之前集成远程更改(例如“git pull…”)。
+详情请参阅“git push -help”中的“关于快进的说明”。
+
+
+hint: Updates were rejected because the remote contains work that you do
+not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+更新被拒绝，因为远程包含您所做的工作在本地没有。这通常是由另一个存储库推送引起的
+您可能希望首先集成远程更改
+提示:(例如，“git pull…”)然后再推。
+提示:详情请参阅“git push -help”中的“关于快进的说明”。
+
+解决方法：
+push前先将远程repository修改pull下来
+
+$ git pull origin master
+
+$ git push -u origin master
 
